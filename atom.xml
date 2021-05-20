@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://279192434.github.io</id>
     <title>Gridea</title>
-    <updated>2021-05-20T10:21:06.652Z</updated>
+    <updated>2021-05-20T14:56:31.675Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://279192434.github.io"/>
     <link rel="self" href="https://279192434.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://279192434.github.io/images/avatar.png</logo>
     <icon>https://279192434.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[vos30002140]]></title>
+        <id>https://279192434.github.io/post/vos30002140/</id>
+        <link href="https://279192434.github.io/post/vos30002140/">
+        </link>
+        <updated>2021-05-20T14:56:07.000Z</updated>
+        <content type="html"><![CDATA[<p>https://drive.google.com/file/d/1YNaUtsEweywup8ysnOB2Kh_gbZXPkITB/view?usp=sharing</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[腾讯轻量云一键安装ikuai]]></title>
         <id>https://279192434.github.io/post/teng-xun-qing-liang-yun-yi-jian-an-zhuang-ikuai/</id>
