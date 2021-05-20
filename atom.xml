@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://279192434.github.io</id>
     <title>Gridea</title>
-    <updated>2021-05-20T14:56:31.675Z</updated>
+    <updated>2021-05-20T15:09:04.015Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://279192434.github.io"/>
     <link rel="self" href="https://279192434.github.io/atom.xml"/>
@@ -11,12 +11,23 @@
     <icon>https://279192434.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[vos30002140]]></title>
+        <title type="html"><![CDATA[vos3000安装]]></title>
         <id>https://279192434.github.io/post/vos30002140/</id>
         <link href="https://279192434.github.io/post/vos30002140/">
         </link>
         <updated>2021-05-20T14:56:07.000Z</updated>
-        <content type="html"><![CDATA[<p>https://drive.google.com/file/d/1YNaUtsEweywup8ysnOB2Kh_gbZXPkITB/view?usp=sharing</p>
+        <content type="html"><![CDATA[<p>1、CentOS7.*换CentOS6.8系统(初始系统必须安装CentOS7，CentOS8不能更换老版本系统):<br>
+wget https://raw.githubusercontent.com/279192434/linux/main/CentOSNET.sh &amp;&amp; chmod 777 CentOSNET.sh &amp;&amp; bash CentOSNET.sh -c 6.8 -v 64 -a --mirror 'http://mirrors.aliyun.com/centos-vault/'<br>
+默认用户：root 密码：Vicer<br>
+2、更新源：<br>
+wget https://raw.githubusercontent.com/279192434/linux/main/yum-update.sh &amp;&amp; chmod 777 yum-update.sh &amp;&amp; bash yum-update.sh<br>
+3、下载vos30002140安装包<br>
+wget https://www.dropbox.com/s/k89m0lvrv4br2kg/vos30002140.tar.gz<br>
+4、解压并安装内核<br>
+tar xf vos30002140.tar.gz &amp;&amp; cd vos30002140 &amp;&amp; chmod 777 * &amp;&amp; ./install6.sh<br>
+执行完服务器会自动重启<br>
+5、安装vos30002140系统<br>
+cd vos30002140 &amp;&amp; ./install.sh</p>
 ]]></content>
     </entry>
     <entry>
