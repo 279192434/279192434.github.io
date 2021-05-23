@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://279192434.github.io</id>
     <title>Gridea</title>
-    <updated>2021-05-23T12:40:56.227Z</updated>
+    <updated>2021-05-23T08:25:30.887Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://279192434.github.io"/>
     <link rel="self" href="https://279192434.github.io/atom.xml"/>
@@ -17,7 +17,7 @@
         </link>
         <updated>2021-05-23T11:50:48.000Z</updated>
         <content type="html"><![CDATA[<p>限制：<br>
-只能推送100M以内的文件，通过其他方式推送会出现不能下载的情况<br>
+建议只推送100M以内的文件，通过其它方式推送100M以上的会出现不能下载的情况，建议只上传100M以内的文件<br>
 最简单的方法：<br>
 推送文件之前把仓库clone一份到本地，cd到仓库目录添加需要推送的文件，然后通过git命令推送到服务器即可</p>
 <p>以下是最简单的方法：<br>
