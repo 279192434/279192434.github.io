@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://279192434.github.io</id>
     <title>Gridea</title>
-    <updated>2021-05-20T15:09:04.015Z</updated>
+    <updated>2021-05-23T12:35:44.495Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://279192434.github.io"/>
     <link rel="self" href="https://279192434.github.io/atom.xml"/>
@@ -10,6 +10,80 @@
     <logo>https://279192434.github.io/images/avatar.png</logo>
     <icon>https://279192434.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[在linux下推送文件到github服务器教程]]></title>
+        <id>https://279192434.github.io/post/zai-linux-xia-tui-song-wen-jian-dao-github-fu-wu-qi-jiao-cheng/</id>
+        <link href="https://279192434.github.io/post/zai-linux-xia-tui-song-wen-jian-dao-github-fu-wu-qi-jiao-cheng/">
+        </link>
+        <updated>2021-05-23T11:50:48.000Z</updated>
+        <content type="html"><![CDATA[<p>限制：<br>
+只能推送100M以内的文件，通过其他方式推送会出现不能下载的情况<br>
+最简单的方法：<br>
+推送文件之前把仓库clone一份到本地，cd到仓库目录添加需要推送的文件，然后通过git命令推送到服务器即可</p>
+<p>以下是最简单的方法：<br>
+git clone git@github.com:用户名/仓库名.git  #clone仓库<br>
+git add .                                                       #所有文件，默认<br>
+#git add README.md  	                         #单个文件，后面跟文件名<br>
+git commit -m &quot;上传文件详细说明介绍&quot;<br>
+git branch -M main                                     #执行生效<br>
+git remote add origin git@github.com:用户名/仓库名.git  #推送到git服务器<br>
+git push -u origin main	                              #同步到服务器</p>
+<p>详细步骤：<br>
+首先：<br>
+安装好git客户端后生成密钥文件<br>
+输入以下命令，直接按回车<br>
+ssh-keygen -t rsa -C &quot;email&quot;                    # email为你在github上注册的邮箱<br>
+windows系统在C:\Users\username.ssh，可以看到id_rsa.pub这个文件 #用户文件目录下<br>
+linux系统一般在/root/.ssh/id_rsa.pub这个文件<br>
+复制密钥文件<br>
+登录github<br>
+在github setting里添加SSH keys<br>
+然后在客户端验证是否成功（一般添加都是没问题，可以不用验证）<br>
+ssh -T git@github.com #在Git Shell下输入命令测试刚才的公钥是否认证正确，linux系统在终端输入即可</p>
+<p>第一步：建立git仓库，cd到你的本地项目根目录下，执行git命令<br>
+windows系统下，进去到clone下来的项目目录，右键打开Git Bash Here即可<br>
+最简单方法：在服务器创建好项目名称，直接clone服务器项目即可<br>
+git clone git@github.com:用户名/仓库名.git<br>
+cd 仓库名/</p>
+<p>第二步：将项目的所有文件添加到仓库中，输入以下命令添加到仓库缓存，等待上传<br>
+git add .<br>
+#第一次运行，双引号里面输入邮箱和用户即可<br>
+git config --global user.email &quot;you@example.com&quot;<br>
+git config --global user.name &quot;Your Name&quot;</p>
+<p>第三步：给上传的文件添加注释<br>
+git commit -m &quot;上传文件的注释说明&quot;          #上传说明<br>
+git branch -M main		                              # 使之执行生效</p>
+<p>第四步：去github上创建自己的Repository，点击Clone or download按钮，复制项目地址git@github.com:用户名/仓库名.git（最好使用SSH的地址，尽量不要用HTTPS的地址）<br>
+链接github仓库<br>
+git remote add origin git@github.com:用户名/仓库名.git</p>
+<p>第五步，上传代码到github远程仓库<br>
+git push origin master  #把本地库的所有内容推送到远程仓库（github）上，即上传本地文件<br>
+git push -u origin master  #同上</p>
+<p>一些可能遇到的问题：<br>
+上传报错<br>
+git remote rm origin # 移出旧的http的origin<br>
+git remote add origin https://xxx@xxx/B.git # 添加新的git方式的origin<br>
+git remote -v    # 查看remote链接<br>
+方式一：输入“ git pull --rebase origin master ” ，然后输入git push origin master语句，即可<br>
+方式二：输入“ git pull origin master --allow-unrelated-histories ”（会弹到文件里面，输入“:wq”退出该文件，如果没有遇到，请忽略），然后输入git push origin master语句，即可</p>
+<p>更新仓库文件<br>
+如果对本地文件有了修改，则需要对仓库文件进行更新，比如本地文件中删除了一个文件。 下面将显示如何对仓库更新。<br>
+首先进入你的master文件夹下，右键打开“Git Bash Here” ，弹出命令窗口 ，输入如下内容<br>
+输入 以下文本即可更新仓库<br>
+git status<br>
+git add -A<br>
+git commit -a -m &quot;update&quot; ： 能提交修改过，但是没有添加到缓存区的文件（修改过的就能提交）<br>
+git push origin master -f</p>
+<p>删除github中的某个文件(夹)<br>
+github上只能删除仓库，但是，却无法删除文件或文件夹，所以只能通过命令来解决。<br>
+首先进入你的master文件夹下，右键打开“Git Bash Here” ，弹出命令窗口 ，输入如下内容<br>
+git pull origin master  # 将远程仓库里面的项目拉下来<br>
+dir  # 查看有哪些文件夹<br>
+git rm -r --cached picture  # 删除picture文件夹<br>
+git commit -m &quot;删除了picture文件夹&quot;  # 提交,添加操作说明<br>
+git push origin master  # 将本次更改更新到github项目上去</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[vos3000安装]]></title>
         <id>https://279192434.github.io/post/vos30002140/</id>
